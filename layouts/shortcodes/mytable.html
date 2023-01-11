@@ -10,6 +10,6 @@
 {{ $sortFuncJs :=  printf "function sort%s(index) { w3.sortHTMLbyNumber(`#%s`,`.item`,`td:nth-child(${index})`);}" $class $class }}
 {{ $logicJs := printf " var table = document.getElementById('%s'); var thNodes = table.querySelectorAll(\"th\");  for(let i=0; i<thNodes.length; i++) { thNodes.item(i).addEventListener('click', function() {sort%s(i+1); }); thNodes.item(i).style.cursor =\"pointer\";var node = document.createElement(\"i\"); node.classList.add(\"fa\",\"fa-sort\"); thNodes.item(i).appendChild(node);}" $class $class}}
 {{ $scriptJs := print $sortFuncJs $logicJs}}
-<script src ="/js/w3.js"></script>
 <script>{{$scriptJs | safeJS}} </script>
+<script src ="/js/w3.js"></script>
 
