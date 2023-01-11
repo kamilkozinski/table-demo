@@ -1,0 +1,15 @@
+{{ $htmlTable := .Inner | markdownify }}
+{{ $class := .Get 0 }}
+{{ $old := "<table>" }}
+{{ $new := printf "<table id=\"%s\">" $class }}
+{{ $htmlTable := replace $htmlTable $old $new }}
+{{ $htmlTable := replace $htmlTable "<thead>" "" }}
+{{ $htmlTable := replace $htmlTable "<tr>" "<tr class=\"item\" >" }}
+{{ $htmlTable := replace $htmlTable "<tr class=\"item\" >" "<tr>" 1 }}
+{{ $htmlTable | safeHTML}}
+
+{{ $sortFuncJs :=  printf "function sort%s(index) { w3.sortHTMLbyNumber(`#%s`,`.item`,`td:nth-child(${index})`);}" $class $class }}
+{{ $logicJs := printf " var table = document.getElementById('%s'); var thNodes = table.querySelectorAll(\"th\");  for(let i=0; i<thNodes.length; i++) { thNodes.item(i).addEventListener('click', function() {sort%s(i+1); }); thNodes.item(i).style.cursor =\"pointer\";var node = document.createElement(\"i\"); node.classList.add(\"fa\",\"fa-sort\"); thNodes.item(i).appendChild(node);}" $class $class}}
+{{ $scriptJs := print $sortFuncJs $logicJs}}
+<script>{{$scriptJs | safeJS}} </script>
+
