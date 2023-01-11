@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jan 2023 15:29:58 +0100</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>W3 Table</title>
+      <link>http://example.org/example/mytable/</link>
+      <pubDate>Tue, 10 Jan 2023 15:29:58 +0100</pubDate>
+      
+      <guid>http://example.org/example/mytable/</guid>
+      <description>id name height weight size 1 aaaa 200 7 7 2 bbbb 190 15 6 3 cccc 222 19 5 4 dddd 150 2 4 5 eeee 175 1 3 </description>
+    </item>
+    
+  </channel>
+</rss>

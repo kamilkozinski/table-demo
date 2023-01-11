@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>W3 Table</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+<body>
+	<header>
+	<a href="http://example.org/">My New Hugo Site</a>
+	
+</header>
+
+	
+	<main>
+
+		<article>
+			<h1>W3 Table</h1>
+			<time datetime="2023-01-10T15:29:58">10.01.2023 15:29</time>
+			<div>
+				
+
+
+
+
+
+
+
+<table id="id05">
+
+<tr>
+<th>id</th>
+<th>name</th>
+<th>height</th>
+<th>weight</th>
+<th>size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="item" >
+<td>1</td>
+<td>aaaa</td>
+<td>200</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr class="item" >
+<td>2</td>
+<td>bbbb</td>
+<td>190</td>
+<td>15</td>
+<td>6</td>
+</tr>
+<tr class="item" >
+<td>3</td>
+<td>cccc</td>
+<td>222</td>
+<td>19</td>
+<td>5</td>
+</tr>
+<tr class="item" >
+<td>4</td>
+<td>dddd</td>
+<td>150</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="item" >
+<td>5</td>
+<td>eeee</td>
+<td>175</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<script>function sortid05(index) { w3.sortHTMLbyNumber(`#id05`,`.item`,`td:nth-child(${index})`);} var table = document.getElementById('id05'); var thNodes = table.querySelectorAll("th");  for(let i=0; i<thNodes.length; i++) { thNodes.item(i).addEventListener('click', function() {sortid05(i+1); }); thNodes.item(i).style.cursor ="pointer";var node = document.createElement("i"); node.classList.add("fa","fa-sort"); thNodes.item(i).appendChild(node);} </script>
+<script src ="/js/w3.js"></script>
+
+
+
+			</div>
+			
+			
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/example/mytable/">W3 Table</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2023 <a href="http://example.org/">My New Hugo Site</a></p>
+</footer>
+
+</body>
+</html>
