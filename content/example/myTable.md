@@ -2,7 +2,7 @@
 title: "W3 Table"
 date: 2023-01-10T15:29:58+01:00
 ---
-
+This is implementation of w3.js sortable table:
 {{<mytable "id05">}}
 | id | name | height | weight | size |
 |----|------|--------|--------|------|
