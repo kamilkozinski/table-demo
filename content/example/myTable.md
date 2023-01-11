@@ -1,5 +1,5 @@
 ---
-title: "MyTable"
+title: "W3 Table"
 date: 2023-01-10T15:29:58+01:00
 ---
 
