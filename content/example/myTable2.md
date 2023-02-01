@@ -3,7 +3,7 @@ title: "Sortable Table"
 date: 2023-01-10T15:29:58+01:00
 ---
 This is implementation of  sortable table:
-{{<tablesortable "sortable-theme-dark">}}
+{{<tablesortable>}}
 | id | name | height | weight | size |
 |----|------|--------|--------|------|
 | 1  | aaaa | 200    | 7      | 7    |

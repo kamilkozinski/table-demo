@@ -7,6 +7,7 @@ table[data-sortable] {
 table[data-sortable] th {
   vertical-align: bottom;
   font-weight: bold;
+  border: 1px solid currentColor;
 }
 /* line 10, ../sass/_sortable.sass */
 table[data-sortable] th, table[data-sortable] td {
@@ -15,29 +16,33 @@ table[data-sortable] th, table[data-sortable] td {
 }
 /* line 14, ../sass/_sortable.sass */
 table[data-sortable] th:not([data-sortable="false"]) {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
+
   cursor: pointer;
 }
+
 /* line 26, ../sass/_sortable.sass */
 table[data-sortable] th:after {
   content: "";
-  visibility: hidden;
   display: inline-block;
   vertical-align: inherit;
   height: 0;
   width: 0;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent;
+  border-top-color: currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
   margin-right: 1px;
   margin-left: 10px;
   float: right;
+  margin-top: 12px;
+}
+table[data-sortable]:hover th[data-sorted="false"]:after{
+  border-top-color: currentColor;
+  margin-top: 12px;
+
+
 }
 /* line 40, ../sass/_sortable.sass */
 table[data-sortable] th[data-sorted="true"]:after {
@@ -45,25 +50,16 @@ table[data-sortable] th[data-sorted="true"]:after {
 }
 /* line 43, ../sass/_sortable.sass */
 table[data-sortable] th[data-sorted-direction="descending"]:after {
-  border-top-color: inherit;
-  margin-top: 8px;
+  border-top-color: currentColor;
+  border-bottom-color: transparent;
+  margin-top: 12px;
 }
 /* line 47, ../sass/_sortable.sass */
 table[data-sortable] th[data-sorted-direction="ascending"]:after {
-  border-bottom-color: inherit;
+  border-bottom-color: currentColor;
+  border-top-color: transparent;
   margin-top: 3px;
 }
-
-/* line 5, ../sass/sortable-theme-light.sass */
-table[data-sortable].sortable-theme-light {
-  color: #333333;
-  background: #f2f2f2;
-}
-/* line 9, ../sass/sortable-theme-light.sass */
-table[data-sortable].sortable-theme-light tbody td {
-  border-top: 1px solid #e0e0e0;
-}
-/* line 12, ../sass/sortable-theme-light.sass */
-table[data-sortable].sortable-theme-light th[data-sorted="true"] {
-  background: #e0e0e0;
+table[data-sortable] tbody td {
+  border: 1px solid currentColor;
 }
