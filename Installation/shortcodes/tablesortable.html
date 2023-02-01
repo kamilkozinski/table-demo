@@ -1,0 +1,14 @@
+{{ $htmlTable := .Inner | markdownify }}
+{{ $class := .Get 0 }}
+{{ $old := "<table>" }}
+{{- $normal := .Get 0 }}
+{{- $dark := .Get 1 }}
+{{ $new := printf "<table class=\"%s\" data-sortable>" $class }}
+{{ $htmlTable := replace $htmlTable $old $new }}
+
+{{ $htmlTable | safeHTML}}
+
+{{ $sortableInit :=  printf "Sortable.init();" }}
+<script src ="/js/sortable.min.js"></script>
+<script>{{$sortableInit | safeJS}} </script>
+
