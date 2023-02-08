@@ -5,9 +5,7 @@ Source files needed to add this shortcode into custom hugo project are placed in
 1. Copy `/shortcodes/tablesortable.html` into `layouts/shortcodes` folder in your project. 
 2. Copy `/static/js/sortable.min.js` into `static/js` folder in your project. 
 3. Copy `/static/css/sortable-theme.css` into `static/css` folder in your project. 
-4. Add a reference to css theme file in your project, e.g in the head of baseof.html file 
- `<link rel="stylesheet" href="/css/sortable-theme.css" />`
-5. To use it run tag `{{<tablesortable>}}` in .md file and place markdown table between opening and closing tag, e.g. 
+4. To use it run tag `{{<tablesortable>}}` in .md file and place markdown table between opening and closing tag, e.g. 
 `{{<tablesortable>}}`\
 | id | name | height | weight | size |\
 |----|------|--------|--------|------|\
